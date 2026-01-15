@@ -838,7 +838,7 @@ window.playerGear={
             applyStats:function(stats,player){
                 
                 stats.capacity+=50000000000000000000000000000000
-                stats.lootLuck*=10000000000000
+                stats.lootLuck*=10
                 stats.convertRate*=100000000000000
                 stats.beeSpeed*=1.1
                 stats.redPollen*=10000000000
