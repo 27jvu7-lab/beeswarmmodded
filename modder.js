@@ -840,10 +840,13 @@ window.playerGear={
                 stats.capacity+=50000000000000000000000000000000
                 stats.lootLuck*=10000000000000
                 stats.convertRate*=100000000000000
-                stats.beeSpeed*=100000000000
+                stats.beeSpeed*=1.1
                 stats.redPollen*=10000000000
                 stats.bluePollen*=10000000000
                 stats.whitePollen*=10000000000
+                stats.instantRedConversion*=100
+                stats.instantBlueConversion*=100
+                stats.instantWhiteConversion*=100
             },
             desc:'Attaches to your waist to expand the size of your container.<br><br>+5,000 capacity<br>x1.15 loot luck<br>x1.1 convert rate',
             cost:['1 honey','1 sunflowerSeed'],
