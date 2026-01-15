@@ -27,7 +27,7 @@ window.playerGear={
                 cylinder(x,y+1.25*0.5,z,0.16,0.15,10,0.3,0.3,0.3,90,0,0)
             },
             desc:'When planted in the ground, causes nearby flowers to regrow faster!<br><br>Count: 1<br>Diameter: 10<br>Power: 20<br>Rate: 4s<br><br>Press "R" to place a sprinkler.',
-            cost:['1111111 honey'],
+            cost:['1 honey'],
         },
 
         silverSoakers:{
@@ -47,7 +47,7 @@ window.playerGear={
                 cylinder(x,y+1.25*0.5,z,0.16,0.15,10,0.7,0.7,0.7,90,0,0)
             },
             desc:'Two sprinklers which fire faster!<br><br>Count: 2<br>Diameter: 10<br>Power: 20<br>Rate: 3.5s<br><br>Press "R" to place a sprinkler.',
-            cost:['22222222 honey'],
+            cost:['1 honey'],
         },
 
         goldenGushers:{
@@ -67,7 +67,7 @@ window.playerGear={
                 cylinder(x,y+1.25*0.5,z,0.16,0.15,10,0.9,0.9,0.2,90,0,0)
             },
             desc:'Three gorgeous sprinklers with enormous range.<br><br>Count: 3<br>Diameter: 11<br>Power: 25<br>Rate: 3.5s<br><br>Press "R" to place a sprinkler.',
-            cost:['333333333 honey'],
+            cost:['1 honey'],
         },
 
         diamondDiluters:{
@@ -87,7 +87,7 @@ window.playerGear={
                 cylinder(x,y+1.25*0.5,z,0.16,0.15,10,0,0.9,0.9,90,0,0)
             },
             desc:'Four enhanced sprinklers made of durable artificial diamond!<br><br>Count: 4<br>Diameter: 11<br>Power: 25<br>Rate: 3s<br><br>Press "R" to place a sprinkler.',
-            cost:['4444444444 honey'],
+            cost:['1 honey'],
         },
         
         superSaturator:{
@@ -117,7 +117,7 @@ window.playerGear={
                 cylinder(x,y+0.7,z,0.1,0.5,10,0.2,10,10,0,0,0,0.1,false)
             },
             desc:'The ultimate sprinkler. Nobody knows how it works or where it came from.<br><br>Count: 1<br>Diameter: 15<br>Power: 50<br>Rate: 1s<br><br>Press "R" to place a sprinkler.',
-            cost:['55555555555 honey'],
+            cost:['1 honey'],
         }
     },
     
@@ -455,7 +455,7 @@ window.playerGear={
             },
             applyStats:function(stats,player){
                 
-                stats.gliderSpeed=18*0.7
+                stats.gliderSpeed=100*0.7
                 stats.gliderFall=-5*0.75
             },
             desc:'A parachute you can use to glide down the mountain and reach new places!<br><br>Press jump while in the air to open. ',
@@ -479,8 +479,8 @@ window.playerGear={
             },
             applyStats:function(stats,player){
                 
-                stats.gliderSpeed=18
-                stats.gliderFall=-5
+                stats.gliderSpeed=100
+                stats.gliderFall=-4
             },
             desc:'Floats much faster than the Parachute, allowing you to fly through the sky!<br><br>Press jump while in the air to open. ',
             cost:['5000000 honey'],
@@ -745,7 +745,7 @@ window.playerGear={
 
             },
             desc:'The offical mask of a gummy soldier.<br><br>x1.75 goo<br>x2 capacity<br>x1.75 white field capacity<br>x1.5 white pollen<br>x1.35 pollen<br>+25% instant white conversion<br>x1.5 honey from tokens<br>x1.75 convert rate<br>+30% defense<br>x1.2 bee ability rate<br>+Passive: Gummy Morph<br>+Passive: Coin Scatter',
-            cost:['5000000000 honey','150 glue','75 enzymes','75 oil','75 glitter'],
+            cost:['1 honey'],
         },
         
         diamondMask:{
@@ -767,24 +767,24 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.capacityMultiplier*=3
-                stats.blueFieldCapacity*=1.75
-                stats.bluePollen*=1.5
-                stats.bluePollen*=1.35
-                stats.whitePollen*=1.35
-                stats.redPollen*=1.35
-                stats.convertRate*=2
-                stats.convertRateAtHive*=2
-                stats.bubblePollen*=2
-                stats.redBeeAbilityRate*=1.2
-                stats.blueBeeAbilityRate*=1.2
-                stats.whiteBeeAbilityRate*=1.2
-                stats.defense+=0.35
+                stats.capacityMultiplier*=300
+                stats.blueFieldCapacity*=1000.75
+                stats.bluePollen*=1000.5
+                stats.bluePollen*=1000.35
+                stats.whitePollen*=10000.35
+                stats.redPollen*=10000.035
+                stats.convertRate*=2000
+                stats.convertRateAtHive*=20000
+                stats.bubblePollen*=20000
+                stats.redBeeAbilityRate*=100000.2
+                stats.blueBeeAbilityRate*=1000000.2
+                stats.whiteBeeAbilityRate*=1000000.2
+                stats.defense+=10000.35
                 player.addEffect('diamondDrainPassive')
                 player.addEffect('bubbleBombsPassive')
             },
             desc:'Proudly show off your extreme wealth to the world. Shine so brightly that others will complain.<br><br>x3 capacity<br>x1.75 blue field capacity<br>x1.5 blue pollen<br>x1.35 pollen<br>x2 convert rate<br>x2 convert rate at hive<br>x2 bubble pollen<br>+35% defense<br>x1.2 bee ability rate<br>+Passive: Diamond Drain<br>+Passive: Bubble Bombs',
-            cost:['5000000000 honey','250 blueExtract','1 diamondEgg','75 glitter','100 oil'],
+            cost:['1 honey'],
         },
         
         demonMask:{
@@ -818,7 +818,7 @@ window.playerGear={
                 player.addEffect('ignitePassive')
             },
             desc:'Embrace hate to take on the form of a Demon Bee. Become both extremely unpleasant and powerful.<br><br>x2 capacity<br>x1.75 red field capacity<br>x1.75 red pollen<br>+50% instant flame conversion<br>x2 flame pollen<br>x1.25 bee attack<br>+35% defense<br>+20% bee ability rate<br>+Passive: X Flame<br>+Passive: Ignite',
-            cost:['5000000000 honey','350 stinger','250 redExtract','100 enzymes','75 glue'],
+            cost:['1 honey'],
         },
     },
     
@@ -837,9 +837,13 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.capacity+=50000000
-                stats.lootLuck*=1000
-                stats.convertRate*=1000
+                stats.capacity+=50000000000000000000000000000000
+                stats.lootLuck*=10000000000000
+                stats.convertRate*=100000000000000
+                stats.beeSpeed*=100000000000
+                stats.redPollen*=10000000000
+                stats.bluePollen*=10000000000
+                stats.whitePollen*=10000000000
             },
             desc:'Attaches to your waist to expand the size of your container.<br><br>+5,000 capacity<br>x1.15 loot luck<br>x1.1 convert rate',
             cost:['1 honey','1 sunflowerSeed'],
