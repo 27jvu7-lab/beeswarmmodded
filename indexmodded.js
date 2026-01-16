@@ -15466,7 +15466,7 @@ function BeeSwarmSimulator(DATA){
             this.starSawHitTimer=0
             this.level=6
             this.health=player.extraInfo.mob_snail_health||5000000
-            this.maxHealth=5000000
+            this.maxHealth=5
             this.pos=[fieldInfo[this.field].x+fieldInfo[this.field].width*0.5-19,fieldInfo[this.field].y+0.3,fieldInfo[this.field].z+fieldInfo[this.field].length*0.5,0]
             this.central=[fieldInfo[this.field].x+fieldInfo[this.field].width*0.5,fieldInfo[this.field].z+fieldInfo[this.field].length*0.5]
             this.flameTimer=0
@@ -15521,13 +15521,13 @@ function BeeSwarmSimulator(DATA){
 
                 amulet.push(...MATH.selectFromArray(['*'+MATH.random(1.05+g*0.04,1.1+g*0.075).toFixed(2)+' lootLuck','+'+MATH.random(0.02+g*0.01,0.04+g*0.015).toFixed(2)+' INSTANT_CONVERSION','*'+MATH.random(1.01+g*0.01,1.03+g*0.015).toFixed(2)+' POLLEN','*'+MATH.random(1.05+g*0.016,1.09+g*0.03).toFixed(2)+' pollenFromTools','+'+MATH.random(g*0.01+0.02,g*0.01+0.015).toFixed(2)+' defense','*'+MATH.random(1.01+g*0.01,1.05+g*0.015).toFixed(2)+' honeyFromTokens'],(g*0.5+2)|0))
 
-                player.showGeneratedAmulet(['bronze','silver','gold','diamond','supreme'][g]+'ShellAmulet',amulet)
+                player.showGeneratedAmulet(['supreme'][g]+'ShellAmulet',amulet)
                 
                 let loots='',decay=Math.min(player.stats.stumpSnail*0.2+0.5,1)
 
-                loots+='ticket,'.repeat(((MATH.random(50,175)*decay))|0)
+                loots+='giftedMythicEgg,'.repeat(((MATH.random(50,175)*decay))|0)
                 loots+='glue,'.repeat(((MATH.random(10,25)*decay))|0)
-                loots+='gumdrops,'.repeat(((MATH.random(25,150)*decay))|0)
+                loots+='festiveBean,'.repeat(((MATH.random(25,150)*decay))|0)
                 loots+='starJelly,'.repeat(((MATH.random(0,5)*decay))|0)
                 loots+='glitter,'.repeat(((MATH.random(2,7)*decay))|0)
                 loots+='oil,'.repeat(((MATH.random(2,7)*decay))|0)
