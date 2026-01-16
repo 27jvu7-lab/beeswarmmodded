@@ -1559,7 +1559,7 @@ function BeeSwarmSimulator(DATA){
             
             isMachine:true,requirements:function(player){
                 
-                if(player.discoveredGifteds.length<40) return "Discover 40 gifted bee types to generate a Supreme Star Amulet!"
+                if(player.discoveredGifteds.length<1) return "Discover 40 gifted bee types to generate a Supreme Star Amulet!"
                 
                 if(player.honey<5000000000) return 'You need 5B honey to generate a Supreme Star Amulet!'
 
@@ -1617,8 +1617,8 @@ function BeeSwarmSimulator(DATA){
                 player.addEffect('redBoost',false,false,undefined,10)
                 player.honey+=1000*(numBees+1)
                 player.updateInventory()
-                player.addMessage('+'+MATH.addCommas((1000*numBees)+'')+' Honey')
-                player.addMessage('+'+MATH.addCommas((numBees+3)+'')+' Strawberries')
+                player.addMessage('+'+MATH.addCommas((1000*numBees)+'')+' giftedMythicEgg')
+                player.addMessage('+'+MATH.addCommas((numBees+3)+'')+' giftedMythicEgg')
                 player.addMessage('Activated x10 "Red Boost"')
                 player.addMessage('Activated x5 "Haste"')
             }
@@ -21921,7 +21921,7 @@ function BeeSwarmSimulator(DATA){
                 ParticleRenderer.add({x:player.body.position.x+x,y:player.body.position.y+y,z:player.body.position.z+z,vx:-player.bodyDir[2]*2,vy:1.75,vz:player.bodyDir[0]*2,grav:0,size:MATH.random(70,120),col:[1,0,Math.random()],life:1,rotVel:MATH.random(-3,3),alpha:4.5})
             },
             desc:'Swipe through flames to unlock their dark potential. Ensue dark chaos in fields and refuel burning flames, collecting more pollen and dealing more damage. Tend a destructive field of violet fire to enhance your Super-Crit power and Instant Red Conversion.',
-            cost:['2500000000000 honey','1000 redExtract','200 stinger','50 hardWax','15 superSmoothie']
+            cost:['1 honey']
         },
         
         tidePopper:{
@@ -21970,7 +21970,7 @@ function BeeSwarmSimulator(DATA){
                 
             },
             desc:'Pierce through flowers and bubbles with torriental waves, washing away tokens and converting pollen from bees. Swings faster and ramps up the more you pop, then unleashes tidal waves in a violent surge at 500 bubbles. Splash Balloons with tall waves to earn Tide Blessing and re-energize tidal waves with the destruction of bubbles.',
-            cost:['2500000000000 honey','1000 blueExtract','200 stinger','30 swirledWax','15 superSmoothie']
+            cost:['2 honey']
         },
         
         gummyBaller:{
