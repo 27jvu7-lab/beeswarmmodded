@@ -1615,12 +1615,9 @@ function BeeSwarmSimulator(DATA){
                 items.strawberry.amount+=numBees+3
                 player.addEffect('haste',false,false,undefined,5)
                 player.addEffect('redBoost',false,false,undefined,10)
-                player.honey+=1000*(numBees+1)
+                player.giftedMythicEgg+=1000*(numBees+1)
                 player.updateInventory()
-                player.addMessage('+'+MATH.addCommas((1000*numBees)+'')+' giftedMythicEgg')
-                player.addMessage('+'+MATH.addCommas((numBees+3)+'')+' giftedMythicEgg')
-                player.addMessage('Activated x10 "Red Boost"')
-                player.addMessage('Activated x5 "Haste"')
+
             }
         },
         blueberry_dispenser:{
@@ -2934,7 +2931,7 @@ function BeeSwarmSimulator(DATA){
 
                 let amulet=[],t='supreme'
 
-                let g=['bronze','silver','gold','diamond','supreme'].indexOf(t)
+                let g=['supreme'].indexOf(t)
 
 
                 amulet.push('*1.'+(g+1)+' capacityMultiplier','*'+MATH.random(1.05+g*0.15,1.15+g*0.15).toFixed(2)+' convertRate')
@@ -2956,7 +2953,7 @@ function BeeSwarmSimulator(DATA){
 
                 amulet.push(...MATH.selectFromArray(['*'+MATH.random(1.05+g*0.04,1.1+g*0.075).toFixed(2)+' lootLuck','+'+MATH.random(0.02+g*0.01,0.04+g*0.015).toFixed(2)+' INSTANT_CONVERSION','*'+MATH.random(1.01+g*0.01,1.03+g*0.015).toFixed(2)+' POLLEN','*'+MATH.random(1.05+g*0.016,1.09+g*0.03).toFixed(2)+' pollenFromTools','+'+MATH.random(g*0.01+0.02,g*0.01+0.015).toFixed(2)+' defense','*'+MATH.random(1.01+g*0.01,1.05+g*0.015).toFixed(2)+' honeyFromTokens'],(g*0.5+2)|0))
 
-                player.showGeneratedAmulet(['bronze','silver','gold','diamond','supreme'][g]+'ShellAmulet',amulet)
+                player.showGeneratedAmulet(['supreme'][g]+'ShellAmulet',amulet)
             }
         }
 
@@ -21841,8 +21838,8 @@ function BeeSwarmSimulator(DATA){
         darkScythe:{
             
             collectPattern:[[0,-3],[0,-4],[1,-5],[1,-4],[1,-3],[2,-5],[2,-4],[2,-3],[3,-3],[3,-5],[4,-1],[-1,-3],[-1,-4],[-2,-3],[-3,-3],[0,-5],[-1,-5],[-2,-4],[-4,-2],[3,-4],[4,-4],[2,-2],[3,-2],[-2,-2],[-3,-2],[-4,-1]],
-            collectAmount:13,
-            cooldown:0.575,
+            collectAmount:100,
+            cooldown:0.1,
             mesh:function(box,cylinder,sphere,star){
                 
                 box(-0.55,0.75,0.55,0.15,2.2,0.15,[0,0,0],[0.1,0,0],[0,0,30])
