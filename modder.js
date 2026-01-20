@@ -939,15 +939,19 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.capacity+=300000
-                stats.capacityMultiplier*=2
-                stats.lootLuck*=2
-                stats.convertRate*=1.8
-                stats.honeyFromTokens*=1.5
-                stats.whiteBeeAttack+=2
-                stats.whiteBombPollen*=1.5
-                stats.beeEnergy*=1.25
+                stats.capacity+=3000000
+                stats.capacityMultiplier*=10
+                stats.lootLuck*=20
+                stats.convertRate*=20
+                stats.honeyFromTokens*=15
+                stats.redBeeAttack+=2
+                stats.redBombPollen*=15
+                stats.beeEnergy*=1000
                 player.addEffect('petalStormPassive')
+                stats.redBeeAbilityRate*=9
+                stats.blueBeeAbilityRate*=9
+                stats.whiteBeeAbilityRate*=9
+                
             },
             desc:'Drape these petals about your waist to harness unlimited flower power.<br><br>+300,000 capacity<br>x2 capacity<br>x2 loot luck<br>x1.8 convert rate<br>x1.5 honey from tokens<br>+2 white bee attack<br>x1.5 white bomb pollen<br>x1.25 bee energy<br>+Passive: Petal Storm',
             cost:['1 honey'],
@@ -1217,12 +1221,12 @@ window.playerGear={
                 stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,0.1)
                 stats.whitePollen*=1.25
                 stats.whitePollen*=1.25
-                stats.redPollen*=1.25
+                stats.redPollen*=3
                 stats.bluePollen*=1.25
                 stats.whiteBeeAttack+=2
-                stats.redBeeAttack+=2
+                stats.redBeeAttack+=100
                 stats.blueBeeAttack+=2
-                stats.defense+=0.1
+                stats.defense+=10
                 stats.honeyAtHive*=1.1
                 player.addEffect('inspireCoconutsPassive')
                 player.addEffect('emergencyCoconutShieldPassive')
@@ -1251,16 +1255,16 @@ window.playerGear={
             applyStats:function(stats,player){
                 
                 stats.movementCollection+=15
-                stats.walkSpeed*=1.2
-                stats.jumpPower*=1.4
+                stats.walkSpeed*=3
+                stats.jumpPower*=4
                 stats.pollenFromCoconuts*=2
                 stats.goo*=1.25
-                stats.beeSpeed*=1.3
+                stats.beeSpeed*=4
                 stats.honeyFromTokens*=1.25
-                stats.redPollen*=1.1
+                stats.redPollen*=3
                 stats.bluePollen*=1.1
                 stats.whitePollen*=1.1
-                stats.beeAttack*=1.1
+                stats.beeAttack*=10
                 stats.convertRateAtHive*=2
                 player.addEffect('coconutHastePassive')
             },
