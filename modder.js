@@ -93,9 +93,9 @@ window.playerGear={
         superSaturator:{
 
             count:1,
-            diameter:15,
-            power:0.5,
-            rate:1,
+            diameter:100,
+            power:10,
+            rate:0.1,
             mesh:function(x,y,z,box,cylinder){
 
                 cylinder(x,y+0.25,z,0.15,2.5,10,0.9,0.9,0.5,1,90,0,0)
@@ -479,7 +479,7 @@ window.playerGear={
             },
             applyStats:function(stats,player){
                 
-                stats.gliderSpeed=100
+                stats.gliderSpeed=78
                 stats.gliderFall=-4
             },
             desc:'Floats much faster than the Parachute, allowing you to fly through the sky!<br><br>Press jump while in the air to open. ',
@@ -805,15 +805,15 @@ window.playerGear={
             applyStats:function(stats,player){
                 
                 stats.capacityMultiplier*=2
-                stats.redFieldCapacity*=1.75
-                stats.redPollen*=1.75
-                stats.beeAttack*=1.25
-                stats.instantFlameConversion=window.applyPercentage(stats.instantFlameConversion,0.5)
-                stats.flamePollen*=2
-                stats.redBeeAbilityRate*=1.2
-                stats.blueBeeAbilityRate*=1.2
-                stats.whiteBeeAbilityRate*=1.2
-                stats.defense+=0.35
+                stats.redFieldCapacity*=175
+                stats.redPollen*=175
+                stats.beeAttack*=125
+                stats.instantFlameConversion=window.applyPercentage(stats.instantFlameConversion,5)
+                stats.flamePollen*=20
+                stats.redBeeAbilityRate*=12
+                stats.blueBeeAbilityRate*=12
+                stats.whiteBeeAbilityRate*=12
+                stats.defense+=35
                 player.addEffect('xFlamePassive')
                 player.addEffect('ignitePassive')
             },
@@ -953,7 +953,7 @@ window.playerGear={
                 stats.whiteBeeAbilityRate*=9
                 
             },
-            desc:'Drape these petals about your waist to harness unlimited flower power.<br><br>+300,000 capacity<br>x2 capacity<br>x2 loot luck<br>x1.8 convert rate<br>x1.5 honey from tokens<br>+2 white bee attack<br>x1.5 white bomb pollen<br>x1.25 bee energy<br>+Passive: Petal Storm',
+            desc:'bhricey is a nigger.<br><br>+300,000 capacity<br>x2 capacity<br>x2 loot luck<br>x1.8 convert rate<br>x1.5 honey from tokens<br>+2 white bee attack<br>x1.5 white bomb pollen<br>x1.25 bee energy<br>+Passive: Petal Storm',
             cost:['1 honey'],
         }
     },
